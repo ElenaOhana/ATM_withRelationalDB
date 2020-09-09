@@ -1,5 +1,6 @@
 package Accounts;
 
 public interface IAccountService {
-    IAccount createAccount(String accountName, String accountNumber, double amount, String bankId);
+    boolean withdraw(IAccount accountWithdraw,IAccount accountInserted, double amount);
+    boolean insertMoney(IAccount accountInserte, IAccount accountWithdraw,double amount);
 }

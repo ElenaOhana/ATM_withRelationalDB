@@ -12,7 +12,7 @@ public class ConnectorMariaDb implements JDBConnector {
     Connection connection;
 
     public ConnectorMariaDb(String host, String dbName, String login, String password) throws ClassNotFoundException {
-        Class.forName("org.mariadb.jdbc.Driver"); // Ensure we have mariadb Driver in classpath
+        Class.forName("org.mariadb.jdbc.Driver"); // Ensure we have mariaDB Driver in classpath
         this.url = "jdbc:mariadb://" + host + "/" + dbName;
         this.login = login;
         this.password = password;

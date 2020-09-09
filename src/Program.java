@@ -6,12 +6,14 @@ import Bank.BankServiceJDBC;
 import Bank.IBank;
 import DB.JDBC.ConnectorMariaDb;
 import DB.JDBC.JDBConnector;
+import Users.IUser;
 import Users.UserServiceJDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class Program
 {
@@ -27,9 +29,13 @@ public class Program
             BankServiceJDBC bankService = new BankServiceJDBC(connector);
             UserServiceJDBC userService =new UserServiceJDBC(connector);
 
-            IBank bank = bankService.createBank("Test bank3");
-            userService.createUser("1","1",bank);
-            userService.createUser("2","2",bank);
+            IUser user = userService.getUserById(2);
+            user = userService.getUserById(99);
+            user = userService.getUserById(2);
+            //IBank bank = bankService.getBankById(10);
+            //List<IUser> listUser = userService.getListUserByBankId(bank.getBankID());
+            //userService.createUser("10","10",bank);
+            //userService.createUser("20","20",bank);
         }
         catch (SQLException | ClassNotFoundException e)
         {

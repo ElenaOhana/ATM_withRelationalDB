@@ -6,18 +6,19 @@ import java.math.BigDecimal;
 
 public class Account implements IAccount{
     private String accountName;
-    private String accountNumber;
+    private int accountNumber;
     private double balance;
-    ATM atm;
+    private int bankId;
 
-    public Account(String accountName, String accountNumber, double balance) {
+    public Account(int accountNumber, String accountName, double balance, int bankId) {
         this.accountName = accountName;
         this.accountNumber = accountNumber;
         this.balance = balance;
+        this.bankId=bankId;
     }
 
     @Override
-    public String getAccountNumber() {
+    public int getAccountNumber() {
         return accountNumber;
     }
 
@@ -32,34 +33,9 @@ public class Account implements IAccount{
     }
 
     @Override
-    public void setAccountName(String accName) { // Если присоединяется к счету еще один член семьи.
-        this.accountName = accName;
-    }
-    /*@Override
-    public boolean withdraw(double balance) {
-        if (this.balance < balance)
-            return false;
-        else
-            return true;
-    }*/
-    @Override
-    public boolean withdraw(double withdrawSum) {
-        if (balance < withdrawSum)
-            return false;
-        else
-            return true;
+    public int getBankId() {
+        return this.bankId;
     }
 
-    @Override
-    public void insertMoney(double insertSum) {
-        if (atm.insertMoney(insertSum)) {
-            balance = balance + insertSum;
-        }
-        else
-            try {
-                throw new Exception("ATM can't receive money at that moment.");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-    }
+
 }
