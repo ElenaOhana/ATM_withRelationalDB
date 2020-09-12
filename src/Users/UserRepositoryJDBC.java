@@ -1,6 +1,5 @@
 package Users;
 
-import Bank.Bank;
 import Bank.IBank;
 import DB.JDBC.JDBConnector;
 
@@ -8,14 +7,16 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserServiceJDBC implements IUserService {
+public class UserRepositoryJDBC implements IUserRepository {
 
     JDBConnector connector;
-    final String queryTemplInsertclient = "INSERT INTO `clients` (`bank_id`, `first_name`,`last_name`) VALUES (?,?,?)";
-    final String queryTemplgetListUseryBankId = "SELECT * FROM `clients` WHERE `bank_id` = ?";
-    final String getQueryTemplgetUserById = "SELECT * FROM `clients` WHERE `id` = ?";
+    final String queryTempInsertClient = "INSERT INTO `clients` (`bank_id`, `first_name`,`last_name`) VALUES (?,?,?)";
+    final String queryTempGetListUserBankId = "SELECT * FROM `clients` WHERE `bank_id` = ?";
+    final String queryTempGetUserById = "SELECT * FROM `clients` WHERE `id` = ?";
+    final String queryTempDeleteUserById = "DELETE FROM `clients` WHERE `id` = ?";
 
-    public UserServiceJDBC(JDBConnector connector) {
+
+    public UserRepositoryJDBC(JDBConnector connector) {
         this.connector = connector;
     }
 
@@ -24,7 +25,7 @@ public class UserServiceJDBC implements IUserService {
     {
         Connection conn = connector.getConnection();
         int id=0;
-        try(PreparedStatement ps = conn.prepareStatement(queryTemplInsertclient, Statement.RETURN_GENERATED_KEYS))
+        try(PreparedStatement ps = conn.prepareStatement(queryTempInsertClient, Statement.RETURN_GENERATED_KEYS))
         {
             ps.setInt(1, bank.getBankID());
             ps.setString(2,name);
@@ -41,7 +42,6 @@ public class UserServiceJDBC implements IUserService {
                 }
             }
         }
-
         return new User (name, surname, id, bank.getBankID());
     }
 
@@ -49,7 +49,7 @@ public class UserServiceJDBC implements IUserService {
     public List<IUser> getListUserByBankId(int bankId) throws SQLException{
         List<IUser> list = new ArrayList<>();
         Connection conn = connector.getConnection();
-        try (PreparedStatement ps = conn.prepareStatement(queryTemplgetListUseryBankId)) {
+        try (PreparedStatement ps = conn.prepareStatement(queryTempGetListUserBankId)) {
             ps.setInt(1, bankId);
             try (ResultSet resultSet = ps.executeQuery()) {
                 while (resultSet.next()) {
@@ -69,7 +69,7 @@ public class UserServiceJDBC implements IUserService {
     @Override
     public IUser getUserById(int userId) throws SQLException {
         Connection connection = connector.getConnection();
-        try (PreparedStatement ps = connection.prepareStatement(getQueryTemplgetUserById)){
+        try (PreparedStatement ps = connection.prepareStatement(queryTempGetUserById)){
             ps.setInt(1, userId);
             try (ResultSet resultSet = ps.executeQuery())
             {
@@ -84,5 +84,18 @@ public class UserServiceJDBC implements IUserService {
             }
         }
         return null;
+    }
+
+    @Override
+    public void deleteUser(IUser user) throws SQLException {
+        Connection connection = connector.getConnection();
+        try (PreparedStatement ps = connection.prepareStatement(queryTempDeleteUserById)){
+            ps.setInt(1, user.getUserId());
+            int countRow = ps.executeUpdate();
+            if(countRow==0)
+            {
+                throw new SQLException("Error delete user by id " + user.getUserId());
+            }
+        }
     }
 }

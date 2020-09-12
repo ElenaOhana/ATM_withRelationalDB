@@ -1,5 +1,4 @@
 package Accounts;
-
 import ATM.Impl.ATM;
 
 import java.math.BigDecimal;
@@ -36,6 +35,4 @@ public class Account implements IAccount{
     public int getBankId() {
         return this.bankId;
     }
-
-
 }
