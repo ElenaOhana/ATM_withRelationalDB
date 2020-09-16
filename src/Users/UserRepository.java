@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserRepositoryJDBC implements IUserRepository {
+public class UserRepository implements IUserRepository {
 
     JDBConnector connector;
     final String queryTempInsertClient = "INSERT INTO `clients` (`bank_id`, `first_name`,`last_name`) VALUES (?,?,?)";
@@ -16,7 +16,7 @@ public class UserRepositoryJDBC implements IUserRepository {
     final String queryTempDeleteUserById = "DELETE FROM `clients` WHERE `id` = ?";
 
 
-    public UserRepositoryJDBC(JDBConnector connector) {
+    public UserRepository(JDBConnector connector) {
         this.connector = connector;
     }
 

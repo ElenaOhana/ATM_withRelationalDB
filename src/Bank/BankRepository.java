@@ -4,14 +4,13 @@ import DB.JDBC.JDBConnector;
 
 import java.sql.*;
 
-public class BankServiceJDBC implements IBankService {
+public class BankRepository implements IBankRepository {
     JDBConnector connector;
     final String queryTempInsertBank = "INSERT INTO `banks` (`name`) VALUES (?)";
     final String queryTempSelectByName = "SELECT * FROM `banks` WHERE `name` = ?";
     final String getQueryTempSelectById = "SELECT * FROM `banks` WHERE `id` = ?";
 
-    public BankServiceJDBC(JDBConnector connector)
-    {
+    public BankRepository(JDBConnector connector) {
         this.connector =connector;
     }
 

@@ -2,7 +2,7 @@ package Bank;
 
 import java.sql.SQLException;
 
-public interface IBankService
+public interface IBankRepository
 {
     IBank createBank(String bankName) throws SQLException;
     IBank getBankByName(String name) throws SQLException;
