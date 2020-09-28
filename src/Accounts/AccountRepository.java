@@ -19,9 +19,9 @@ public class AccountRepository implements IAccountRepository{
     }
 
     @Override
-    public IAccount createAccount(String accountName,  double amount, IBank bank) throws SQLException{
+    public IAccount createAccount(String accountName,  double amount, IBank bank, Connection conn) throws SQLException{
         int id = 0;
-    Connection connection = jdbConnector.getConnection();
+        Connection connection = conn==null?jdbConnector.getConnection(): conn;
         try (PreparedStatement preparedStatement = connection.prepareStatement(queryTempInsertAccount, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setInt(3, bank.getBankID());
             preparedStatement.setString(1, accountName);

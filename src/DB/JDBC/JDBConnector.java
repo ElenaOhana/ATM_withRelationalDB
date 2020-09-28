@@ -5,4 +5,5 @@ import java.sql.SQLException;
 
 public interface JDBConnector extends AutoCloseable {
     Connection getConnection() throws SQLException;
+    Connection getNewConnection() throws SQLException;
 }

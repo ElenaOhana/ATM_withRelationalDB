@@ -2,5 +2,7 @@ package Card;
 
 public interface ICard {
     String getName();
-    String getPin();
+    int getPin();
+    int getacountNumber();
+    int getcardNumber();
 }

@@ -4,18 +4,19 @@ import Bank.IBank;
 import DB.JDBC.JDBConnector;
 
 import java.sql.*;
+import java.util.Date;
 import java.util.List;
-//atm2 - transaction(both methods)
+//atm2 - transaction(both methods: createUser(...) & insertClientToBank(....))
 public class UserRepository2 implements IUserRepository
 {
     final static private String insertClient = "INSERT INTO `client` (`first_name`,`last_name`) VALUES (?,?)";
-    final static private String insertClientBank = "INSERT INTO `bank_client` (`bank_id`,`client_id`) VALUSE(?,?)";
+    final static private String insertClientBank = "INSERT INTO `bank_client` (`bank_id`,`client_id`) VALUES (?,?)";
     JDBConnector connector;
     public UserRepository2(JDBConnector connector) {
         this.connector = connector;
     }
 
-    private void insertClientBank(Connection conn, Savepoint save, int clientID, int bankID) throws SQLException
+    private void insertClientToBank(Connection conn, Savepoint save, int clientID, int bankID) throws SQLException
     {
         try(PreparedStatement insertClientBank = conn.prepareStatement(UserRepository2.insertClientBank))// why doesn't need the second param *Statement.RETURN_GENERATED_KEYS*?
         {
@@ -30,7 +31,7 @@ public class UserRepository2 implements IUserRepository
     }
 
     @Override
-    public IUser createUser(String name, String surname, IBank bank) throws SQLException
+    public IUser createUser(String name, String surname, IBank bank, Connection connection) throws SQLException
     {
         Connection conn = connector.getConnection();
         conn.setAutoCommit(false);
@@ -51,14 +52,13 @@ public class UserRepository2 implements IUserRepository
                 try (ResultSet generatedKeys = insertClient.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
                         id = generatedKeys.getInt(1);
-                        insertClientBank(conn, save1, id, bank.getBankID());
+                        insertClientToBank(conn, save1, id, bank.getBankID());
                         conn.commit();
                     }
                     else {
                         throw new SQLException("Creating user failed, no ID obtained.");
                     }
                 }
-
             }
         }
         catch (Exception e)

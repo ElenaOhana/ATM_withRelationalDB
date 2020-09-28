@@ -28,6 +28,11 @@ public class ConnectorMariaDb implements JDBConnector {
     }
 
     @Override
+    public Connection getNewConnection() throws SQLException {
+        return null;
+    }
+
+    @Override
     public void close() throws Exception {
         connection.close();
     }

@@ -1,22 +1,41 @@
 package Card;
 
 public class Card implements ICard {
-    private String name;
-    private String pin;
+    private int id;
+    private String clientName;
+    private int pin;
+    private int accountId;
 
-    public Card(String name, String pin) {
-        this.name =name;
+    public Card(int id, String clientName, int pin, int accountId) {
+        this.id = id;
+        this.clientName = clientName;
         this.pin = pin;
+        this.accountId = accountId;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
     public String getName() {
-        return name;
+        return clientName;
     }
 
     @Override
-    public String getPin() {
+    public int getPin() {
         return pin;
     }
+
+    @Override
+    public int getacountNumber() {
+        return accountId;
+    }
+
+    @Override
+    public int getcardNumber() {
+        return id;
+    }
+
 
 }
