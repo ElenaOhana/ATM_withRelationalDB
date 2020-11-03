@@ -5,8 +5,8 @@ import Card.ICard;
 
 public class HandFreeAtm extends ATM implements IATM {
 
-    public HandFreeAtm(int currentAmount, String position, int atmId) {
-        super(currentAmount, position, atmId);
+    public HandFreeAtm(int currentAmount, String position, int atmId, int bankId) {
+        super(currentAmount, position, atmId, bankId);
     }
 
     @Override

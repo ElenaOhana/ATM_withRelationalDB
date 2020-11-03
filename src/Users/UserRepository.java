@@ -21,7 +21,7 @@ public class UserRepository implements IUserRepository {
     @Override
     //transaction: Pair<IUser, IAccount> createUserWithAccount(String name, String surname, IBank bank) throws SQLException;
     public IUser createUser(String name, String surname, IBank bank, Connection connection) throws SQLException {
-        Connection conn = connection==null? connector.getConnection(): connection;
+        Connection conn = connection==null ? connector.getConnection() : connection;
         int id = 0;
         try {
             try (PreparedStatement ps = conn.prepareStatement(queryTempInsertClient, Statement.RETURN_GENERATED_KEYS)) {

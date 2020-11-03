@@ -12,4 +12,5 @@ public interface IAccountRepository {
     //поиск аккаунта по ид и по ид банка
     IAccount getAccountById(int id) throws SQLException;
     List<IAccount> getAccountByBankId(int bankId) throws SQLException;
+    boolean updateAccount(IAccount account) throws SQLException;
 }

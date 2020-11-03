@@ -6,7 +6,6 @@ import Bank.IBank;
 import DB.JDBC.JDBConnector;
 import Users.IUser;
 import Users.IUserRepository;
-import Users.UserRepository;
 import javafx.util.Pair;
 
 import java.sql.Connection;
@@ -15,26 +14,25 @@ import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.util.List;
 
-public class ClientsAccountRepositoty implements IClientsAccountsRepository
+public class ClientsAccountRepository implements IClientsAccountsRepository
 {
     IAccountRepository accounts;
     IUserRepository users;
     JDBConnector connector;
+    final static private String insertClientAccountTemp = "INSERT INTO `accounts_clients` (`account_id`,`client_id`) VALUES (?,?)";
 
-    public ClientsAccountRepositoty(IAccountRepository accounts, IUserRepository users, JDBConnector connector)
+    public ClientsAccountRepository(IAccountRepository accounts, IUserRepository users, JDBConnector connector)
     {
         this.accounts = accounts;
         this.users = users;
         this.connector = connector;
     }
 
-    final static private String insertClientAccountTempl = "INSERT INTO `accounts_clients` (`account_id`,`client_id`) VALUES (?,?)";
-
     //transaction
-    private void insertClientToAccount(Connection conn, int clientID, int accountId) throws SQLException {
-        try (PreparedStatement insertClientAccount = conn.prepareStatement(insertClientAccountTempl))
+    private void insertClientToAccount(Connection conn, int clientId, int accountId) throws SQLException {
+        try (PreparedStatement insertClientAccount = conn.prepareStatement(insertClientAccountTemp))
         {
-            insertClientAccount.setInt(1, clientID);
+            insertClientAccount.setInt(1, clientId);
             insertClientAccount.setInt(2, accountId);
             int row = insertClientAccount.executeUpdate();
             if (row == 0) {

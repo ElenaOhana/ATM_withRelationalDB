@@ -4,13 +4,12 @@ import Bank.IBank;
 import DB.JDBC.JDBConnector;
 
 import java.sql.*;
-import java.util.Date;
 import java.util.List;
 //atm2 - transaction(both methods: createUser(...) & insertClientToBank(....))
 public class UserRepository2 implements IUserRepository
 {
     final static private String insertClient = "INSERT INTO `client` (`first_name`,`last_name`) VALUES (?,?)";
-    final static private String insertClientBank = "INSERT INTO `bank_client` (`bank_id`,`client_id`) VALUES (?,?)";
+    final static private String insertClientToBank = "INSERT INTO `bank_client` (`bank_id`,`client_id`) VALUES (?,?)";
     JDBConnector connector;
     public UserRepository2(JDBConnector connector) {
         this.connector = connector;
@@ -18,11 +17,11 @@ public class UserRepository2 implements IUserRepository
 
     private void insertClientToBank(Connection conn, Savepoint save, int clientID, int bankID) throws SQLException
     {
-        try(PreparedStatement insertClientBank = conn.prepareStatement(UserRepository2.insertClientBank))// why doesn't need the second param *Statement.RETURN_GENERATED_KEYS*?
+        try(PreparedStatement insertClientToBank = conn.prepareStatement(UserRepository2.insertClientToBank))// why doesn't need the second param *Statement.RETURN_GENERATED_KEYS*?
         {
-            insertClientBank.setInt(1,bankID);
-            insertClientBank.setInt(2,clientID);
-            int row = insertClientBank.executeUpdate();
+            insertClientToBank.setInt(1,bankID);
+            insertClientToBank.setInt(2,clientID);
+            int row = insertClientToBank.executeUpdate();
             if(row==0)
             {
                 conn.rollback(save);
