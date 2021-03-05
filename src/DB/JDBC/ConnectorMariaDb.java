@@ -8,7 +8,6 @@ public class ConnectorMariaDb implements JDBConnector {
     String url;
     String login;
     String password;
-
     Connection connection;
 
     public ConnectorMariaDb(String host, String dbName, String login, String password) throws ClassNotFoundException {
@@ -20,8 +19,7 @@ public class ConnectorMariaDb implements JDBConnector {
 
     @Override
     public Connection getConnection() throws SQLException {
-        if (connection==null)
-        {
+        if (connection==null) {
             connection = DriverManager.getConnection(url, login, password);
         }
         return connection;

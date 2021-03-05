@@ -27,7 +27,7 @@ public class BankRepository implements IBankRepository {
                 throw new SQLException("Creating user failed, no rows affected.");
             try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    id = generatedKeys.getInt(1);
+                    id = generatedKeys.getInt(1);//Statement.RETURN_GENERATED_KEYS helps me to check the query
                 }
                 else {
                     throw new SQLException("Creating user failed, no ID obtained.");

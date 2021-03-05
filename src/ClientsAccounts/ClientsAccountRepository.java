@@ -42,27 +42,6 @@ public class ClientsAccountRepository implements IClientsAccountsRepository
     }
 
     @Override
-    public List<IAccount> getListAccountsByClient(IUser client) {
-        return null;
-    }
-
-    @Override
-    public List<IUser> getListUsersByAccount(IAccount account) {
-        return null;
-    }
-
-    @Override
-    public List<IAccount> getListAccountsByClient(int idClient) {
-        return null;
-    }
-
-    @Override
-    public List<IUser> getListUsersByAccount(int idAccount) throws SQLException
-    {
-        return null;
-    }
-
-    @Override
     public Pair<IUser, IAccount> createUserWithAccount(String name, String surname, IBank bank) throws SQLException {
         Connection conn = connector.getConnection();
         return createUserWithAccount(name, surname, bank, conn);
@@ -93,5 +72,25 @@ public class ClientsAccountRepository implements IClientsAccountsRepository
             conn.setAutoCommit(true);
         }
         return new Pair<>(user, account);
+    }
+
+    @Override
+    public List<IAccount> getListAccountsByClient(IUser client) {
+        return null;
+    }
+
+    @Override
+    public List<IUser> getListUsersByAccount(IAccount account) {
+        return null;
+    }
+
+    @Override
+    public List<IAccount> getListAccountsByClient(int idClient) {
+        return null;
+    }
+
+    @Override
+    public List<IUser> getListUsersByAccount(int idAccount) throws SQLException {
+        return null;
     }
 }

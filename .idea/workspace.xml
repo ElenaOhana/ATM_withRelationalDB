@@ -21,28 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4f8de01d-3e16-4482-9a98-f97d56f3aa0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Abstract/IATM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Abstract/IATM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Abstract/IATMRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Abstract/IATMRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Abstract/IATMService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Abstract/IATMService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/ATM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/ATM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/ATMRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/ATMRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/ATMService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/ATMService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/HandFreeAtm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ATM/Impl/HandFreeAtm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Accounts/AccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Accounts/AccountRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Accounts/IAccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Accounts/IAccountRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Card/ICardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Card/ICardRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/ClientsAccounts/IClientsAccountsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/ClientsAccounts/IClientsAccountsRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/DB/JDBC/ConnectorMariaDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/DB/JDBC/ConnectorMariaDb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/DB/JDBC/JDBConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/DB/JDBC/JDBConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Users/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Users/IUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Users/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Users/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Program.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM_Project/Users/UserRepository2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATM_Project/Users/UserRepository2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ATM/Impl/HandFreeAtm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ATM/Impl/HandFreeAtm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/IAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/IAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientsAccounts/ClientsAccountRepositoty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientsAccounts/ClientsAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/UserRepository2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UserRepository2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bank/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank/BankRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientsAccounts/ClientsAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientsAccounts/ClientsAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DB/JDBC/ConnectorMariaDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/JDBC/ConnectorMariaDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,23 +72,23 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tdd_ex" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../822_127_TLV  24_02_21 Design patterns/57_DesignPatterns" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="Users" />
-      <recent name="Bank" />
-      <recent name="Accounts" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Users" />
+      <recent name="Bank" />
+      <recent name="Accounts" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Program">
@@ -168,119 +155,6 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596273314635">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596273314635" />
-    <state x="457" y="68" key="#com.intellij.ide.util.MemberChooser" timestamp="1604403419835">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="457" y="68" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1604403419835" />
-    <state x="-1234" y="-79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-183.1920.1040@-1920.-183.1920.1040" timestamp="1595928667326" />
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-183.1920.1040@0.0.1366.728" timestamp="1595928350977" />
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596700718778" />
-    <state x="371" y="89" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1600084206465">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="89" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1600084206465" />
-    <state x="424" y="209" width="432" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601295232856">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="424" y="209" width="432" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1601295232856" />
-    <state x="43" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599918344373">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="43" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1599918344373" />
-    <state x="46" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/-1920.-183.1920.1040@0.0.1366.728" timestamp="1595870273807" />
-    <state width="416" height="466" key="DebuggerActiveHint" timestamp="1599918792514">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="416" height="466" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1599918792514" />
-    <state x="106" y="106" width="1080" height="480" key="DiffContextDialog" timestamp="1600512298384">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="106" y="106" width="1080" height="480" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1600512298384" />
-    <state x="696" y="163" key="FileChooserDialogImpl" timestamp="1600360887215">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="696" y="163" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600360887215" />
-    <state x="762" y="215" key="FileChooserDialogImpl/0.0.1366.728/-1920.-183.1920.1040@0.0.1366.728" timestamp="1595867325214" />
-    <state x="762" y="215" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596273433934" />
-    <state width="1222" height="29" key="GridCell.Tab.0.bottom" timestamp="1603797449568">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="29" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603797449568" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596744630813" />
-    <state width="1222" height="29" key="GridCell.Tab.0.center" timestamp="1603797449567">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="29" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603797449567" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596744630813" />
-    <state width="1222" height="29" key="GridCell.Tab.0.left" timestamp="1603797449567">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="29" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603797449567" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596744630813" />
-    <state width="1222" height="29" key="GridCell.Tab.0.right" timestamp="1603797449567">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="29" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603797449567" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596744630813" />
-    <state width="1222" height="182" key="GridCell.Tab.1.bottom" timestamp="1600685704774">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="182" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600685704774" />
-    <state width="1222" height="182" key="GridCell.Tab.1.center" timestamp="1600685704774">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="182" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600685704774" />
-    <state width="1222" height="182" key="GridCell.Tab.1.left" timestamp="1600685704774">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="182" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600685704774" />
-    <state width="1222" height="182" key="GridCell.Tab.1.right" timestamp="1600685704774">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1222" height="182" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600685704774" />
-    <state x="242" y="0" key="SettingsEditor" timestamp="1600083892515">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="242" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600083892515" />
-    <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596273438463" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1600269864248">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1600269864248" />
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1597850869623">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597850869623" />
-    <state x="376" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600084035028">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="376" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1600084035028" />
-    <state x="412" y="111" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600087953246">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="412" y="111" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1600087953246" />
-    <state x="189" y="51" width="903" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600685655525">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="189" y="51" width="903" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1600685655525" />
-    <state x="197" y="182" width="1034" height="668" key="dock-window-1" timestamp="1601294767646">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="197" y="182" width="1034" height="668" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1601294767646" />
-    <state x="371" y="98" key="extract.method.dialog" timestamp="1603553883443">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="98" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1603553883443" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1599993142460">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1599993142460" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -288,6 +162,16 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="15" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Card/CardRepository.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Card/CardRepository.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -16,13 +16,11 @@ public class Program {
 
 
     public static void main(String[] args) throws Exception {
-        // create our mysql database connection
+        // create my mysql database connection
         String host = "localhost";
         String dbname = "atm";
         String username = "root";
         String password = "Kinoshka12";
-
-
 
         /*try(JDBConnector connector = new ConnectorMariaDb(host, dbname, username, password))
         {
